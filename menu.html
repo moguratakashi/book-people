@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+</head>
+
+<body>
+    <section class="me-section">
+        <div class="me-container">
+            <div class="me-main-menu">
+                <div class="me-main-top">
+                    <div class="me-main-top-title">
+                        <img class=sp src="img/01_Top02_title_SP.png" alt="本と人">
+                        <img class=pc src="img/01_Top02_title_PC.png" alt="本と人">
+                    </div>
+                    <!-- /.me-main-top-title -->
+                </div>
+                <!-- /.me-main-top -->
+                <div class="me-main-middle">
+                    <p class="text18">教えて下さい、あなたの大切な一冊。</p>
+                    <p class="text18">あなたにとって大切なその本が、<br> 誰かの「人生を変える一冊」
+                        <br> かもしれません。
+                    </p>
+                </div>
+                <!-- /.me-main-middle -->
+                <div class="me-main-bottom">
+                    <div class="me-main-bottom-first">
+                        <div class="me-main-bottom-btn arrow-icon">
+                            <a href="about.html">本と人について</a>
+                        </div>
+                        <div class="me-main-bottom-btn arrow-icon">
+                            <a href="#modal">新規登録はこちら</a>
+                        </div>
+                        <!-- モーダル表示エリア -->
+                        <div class="remodal-bg"></div>
+                        <div class="remodal" data-remodal-id="modal">
+                            <button data-remodal-action="close" class="remodal-close"></button>
+                            <div class="me-register-top">
+                                <img class=sp src="img/01_Top03_title_SP.png" alt="本と人">
+                                <img class=pc src="img/01_Top03_title_PC.png" alt="本と人">
+                            </div>
+                            <!-- /.me-main-top-title -->
+                            <form action="" method="post">
+                                <div class="input-mail">
+                                    <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                                    <input type="email" name- "email" id="mail" placeholder="sample@mail.com" />
+                                </div>
+                                <!-- /.input mail -->
+                                <p><input type="submit" name="submit" value="送信する" id="submit"></p>
+                            </form>
+                            <p class="form-text">入力されたアドレスに認証メールが送信されます。指定受信設定をしている場合は、「bandp.com」ドメインが受信できるように設定してから、再度お試しください。</p>
+                            <p class="sns-btn"><img src="img/btn-facebook.png" alt=""></p>
+                            <p class="sns-btn"><img src="img/btn-twitter.png" alt=""></p>
+                        </div>
+                    </div>
+                    <!-- /.me-main-bottom-first -->
+                    <div class="me-main-bottom-second">
+                        <div class="me-main-bottom-btn arrow-icon">
+                            <a href="#">登録済みの方はこちら</a>
+                        </div>
+                        <div class="me-main-bottom-btn arrow-icon">
+                            <a href="search.html">人を探す</a>
+                        </div>
+                    </div>
+                    <!-- /.me-main-bottom-second -->
+                </div>
+                <!-- /.me-main-bottom -->
+            </div>
+            <!-- /.me-main-menu -->
+        </div>
+        <!-- /.me-container -->
+    </section>
+</body>
+
+</html>

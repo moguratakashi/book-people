@@ -1,0 +1,1006 @@
+/*======================================== 全体 ========================================*/
+
+@charset "utf-8";
+
+html {
+    font-size: 14px;
+    color: #333333;
+}
+
+body {
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, slick;
+    margin: 0;
+    background-image: url("../img/bg_paper.png");
+}
+
+.clearfix::after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: " ";
+    clear: both;
+}
+
+h1 {
+    color: #610901;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #610901;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pc {
+    display: none;
+}
+
+.sp {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .pc {
+        display: block;
+    }
+    .sp {
+        display: none;
+    }
+}
+
+/*======== header ========*/
+
+header {
+    background-color: #D3381C;
+    height: 45px;
+}
+
+.header-inner {
+    display: flex;
+}
+
+.ic-book {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+
+.ic-book:hover {
+    opacity: 0.7;
+}
+
+header ul {
+    margin: 0;
+    padding: 13px 0 0 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+header a {
+    color: #fff;
+}
+
+[class^="icon"] {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 3px;
+    fill: #fff;
+}
+
+.icon-hatena {
+    top: 2px;
+}
+
+.icon-search {
+    top: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 75px;
+    }
+    header li {
+        font-size: 1.2rem;
+    }
+    .ic-book {
+        margin: 15px 0 0 10px;
+    }
+    [class^="icon"] {
+        margin-left: 40px;
+    }
+}
+
+/*======== breadcrumbs ========*/
+
+.breadcrumbs-inner {
+    padding: 10px 0 20px 10px;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    text-decoration: underline;
+    color: #610901;
+}
+
+/*======== footer ========*/
+
+footer {
+    background: #D3381C;
+}
+
+.footer-inner {
+    margin-top: 40px;
+    padding: 20px 20px 10px 20px;
+}
+
+.footer-inner ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-inner li a {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.footer-inner li:before {
+    content: url(../img/triangle.png);
+    margin: 4px;
+    position: relative;
+    top: -1px;
+}
+
+.footer-inner p {
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/*======================================== index ========================================*/
+
+/*======== sp ========*/
+
+.in-section {
+    padding: 0 10px;
+}
+
+.in-container {
+    height: 96vh;
+    margin: 10px auto;
+    border: solid 2px #D3381C;
+}
+
+.in-main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.in-main-right {
+    width: 20%;
+    position: relative;
+}
+
+.in-main-right img {
+    width: 25px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.in-main-center {
+    width: 60%;
+}
+
+.in-main-center-title {
+    width: 92px;
+    margin: 130px auto 40px auto;
+}
+
+.in-main-center-btn {
+    width: 72px;
+    margin: 0 auto;
+}
+
+.in-main-center-btn-pen {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    width: 68px;
+    height: 68px;
+    border: solid 2px #D3381C;
+    line-height: 68px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    transition: .3s;
+}
+
+.in-main-center-btn-pen:hover {
+    background: #D3381C;
+}
+
+.in-main-center-btn-pen:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.in-main-center-btn-pen img {
+    margin: 17px auto 0 auto;
+    display: block;
+}
+
+.in-main-left {
+    width: 20%;
+    position: relative;
+}
+
+.in-main-left img {
+    margin-left: 15px;
+    position: absolute;
+    bottom: 15px;
+}
+
+/*======== pc ========*/
+
+@media screen and (min-width: 768px) {
+    .in-main-center-title {
+        width: 373px;
+        margin: 25% auto 100px auto;
+    }
+}
+
+/*======================================== menu ========================================*/
+
+/*======== sp ========*/
+
+.me-main-top-title {
+    width: 153px;
+    margin: 65px auto 45px auto;
+}
+
+.me-main-middle {
+    margin-bottom: 10%;
+}
+
+.text18 {
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.me-main-bottom-btn {
+    overflow: hidden;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    border: solid 2px #D3381C;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+
+}
+
+.me-main-bottom-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+/* マウスオーバーカラー */
+
+.me-main-bottom-btn a:hover {
+    background: #D3381C;
+    color: #fff;
+}
+
+/*赤い丸 */
+
+.arrow-icon a:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background: #D3381C;
+}
+
+/*「after要素」で三角 */
+
+.arrow-icon a:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    margin-top: -5px;
+    border: 5px solid transparent;
+    /*top right bottom を透明化 */
+    border-left: 6px solid #fff;
+}
+
+/*「after要素」のマウスオーバー（カラーを合わせる） */
+
+.arrow-icon a:hover:after {
+    border-left: 6px solid #D3381C;
+}
+
+.arrow-icon a:hover:before {
+    background: #fff;
+}
+
+/*======== pc ========*/
+
+@media screen and (min-width: 768px) {
+    .me-main-top-title {
+        width: 226px;
+        margin: 10% auto 45px auto;
+    }
+    .text18 {
+        font-size: 1.4rem;
+    }
+    .me-main-middle {
+        margin-bottom: 7%;
+    }
+    .me-main-bottom-btn {
+        width: 330px;
+        margin: 0 7px 14px 7px;
+    }
+    .me-main-bottom-first,
+    .me-main-bottom-second {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*======================================== About ========================================*/
+
+/*======== sp ========*/
+
+.box-title {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.h1-title p {
+    color: #D3381C;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    border-top: 2px #D3381C dashed;
+    margin: 0 0 10px 0;
+}
+
+.ab-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.ab-text span {
+    font-size: 1.5rem;
+    color: #D3381C;
+}
+
+.box-content {
+    margin: 15px 10px;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.h2-title h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #610901;
+    background: rgb(255, 241, 239);
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.box-content-text {
+    padding: 5px 15px 10px;
+}
+
+.box-h3 {
+    padding: 20px 10px 0 10px;
+}
+
+.box-h3 p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #610901;
+    margin-bottom: 5px;
+}
+
+.box-icon {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.h4-red {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    color: #D3381C;
+    text-align: center;
+}
+
+.look-sample,
+.try-search {
+    margin: 30px 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.look-sample:before {
+    content: url(../img/newwindow.png);
+    margin: 6px;
+    position: relative;
+    top: 5px;
+}
+
+.try-search:before {
+    content: url(../img/try-seach.png);
+    margin: 6px;
+    position: relative;
+    top: 4px;
+}
+
+.add-info {
+    margin-top: 20px;
+}
+
+.h2-title-blue h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #012651;
+    background: #e4f0fd;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.box-h3-blue {
+    padding: 20px 10px 0 10px;
+    clear: both;
+}
+
+.box-h3-blue p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #001833;
+    margin-bottom: 5px;
+}
+
+.blue-hr {
+    height: 1px;
+    border: none;
+    border-top: 2px #012651 dashed;
+    margin: 0;
+}
+
+.h4-blue {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    color: #012651;
+    text-align: center;
+}
+
+.look-sample-blue {
+    margin: 30px 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.look-sample-blue:before {
+    content: url(../img/newwindow-blue.png);
+    margin: 6px;
+    position: relative;
+    top: 5px;
+}
+
+.look-sample-blue a {
+    text-decoration: none;
+    color: #103467;
+}
+
+.register-btn {
+    overflow: hidden;
+    width: 60%;
+    max-width: 300px;
+    height: 50px;
+    margin: 40px auto 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    /*    clear: both;*/
+}
+
+.register-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* マウスオーバーカラー */
+
+.register-btn a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.register-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/*======== pc ========*/
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    .box-title {
+        padding: 20px 20px;
+    }
+    .ab-text {
+        margin-top: 15px;
+    }
+    .box-content {
+        height: 430px;
+        max-width: 470px;
+        float: left;
+    }
+    .box-h3 {
+        padding: 30px 10px 5px 10px;
+    }
+    .box-h3-blue {
+        padding: 30px 10px 5px 10px;
+    }
+
+    .last-box {
+        margin-bottom: 40px;
+    }
+    .footer-inner ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footer-inner li {
+        padding-right: 20px;
+    }
+
+}
+
+/*======================================== Search ========================================*/
+
+/*======== sp ========*/
+
+.se-box-content {
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.se-title-text {
+    color: #610901;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.7;
+    padding: 40px 0 30px 0;
+}
+
+.se-main-btn {
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    border: solid 2px #D3381C;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+/* マウスオーバーカラー */
+
+.arrow-icon-bottom a:hover {
+    background: #D3381C;
+    color: #fff;
+}
+
+/*赤い丸下向き */
+
+.arrow-icon-bottom a:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background: #D3381C;
+}
+
+/*「after要素」で三角 */
+
+.arrow-icon-bottom a:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    border: 5px solid transparent;
+    /*top right bottom を透明化 */
+    border-top: 7px solid #fff;
+}
+
+/*「after要素」のマウスオーバー（カラーを合わせる） */
+
+.arrow-icon-bottom a:hover:after {
+    border-top: 7px solid #D3381C;
+}
+
+.arrow-icon-bottom a:hover:before {
+    background: #fff;
+}
+
+.acdn-content {
+    padding: 10px;
+    display: none;
+}
+
+.dashedline-title {
+    margin-top: 10px;
+}
+
+.acdn-content a {
+    line-height: 1.2;
+}
+
+.acdn-content li {
+    text-decoration: underline;
+    margin: 1rem 0;
+}
+
+.acdn-button {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.acdn-button.active {
+    background: #D3381C;
+    color: #fff;
+}
+
+.arrow-icon-bottom a.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 0;
+    height: 0;
+    margin-top: -9px;
+    border: 5px solid transparent;
+    /*top right bottom を透明化 */
+    border-bottom: 7px solid #D3381C;
+}
+
+.arrow-icon-bottom a.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.close-btn {
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.close-btn a {
+    color: #D3381C;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #D3381C;
+    padding-bottom: 5px;
+}
+
+.close-btn a:hover {
+    text-decoration: none;
+}
+
+.tojiru-sankaku {
+    font-size: 1rem;
+    padding-bottom: 2px;
+}
+
+.arrow-icon-top a:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.arrow-icon-top a:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 0;
+    height: 0;
+    margin-top: -9px;
+    border: 5px solid transparent;
+    /*top right bottom を透明化 */
+    border-bottom: 7px solid #D3381C;
+}
+
+.job-name {
+    padding-bottom: 5px;
+}
+
+/* 質問とその回答で探す */
+
+.qa {
+    width: 100%;
+}
+
+.qa-answer {
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    border: solid 1px #eee;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    background: #fff;
+}
+
+.qa-answer a {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333333;
+    padding: 0;
+}
+
+.qa-answer-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star {
+    color: #F5A623;
+}
+
+.dashedline-question {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #610901;
+}
+
+.qabox {
+    width: 250px;
+    border-radius: 6px;
+    background: #FBFBFB;
+    padding: 5px 15px;
+    margin: 0 5px;
+}
+
+.other-answer {
+    font-size: 1rem;
+    padding: 0 0 10px 0;
+    background: none;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.other-answer a:before {
+    content: url(../img/reload.png);
+    margin: 6px;
+    position: relative;
+    top: 5px;
+}
+
+.select-box select {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #999;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px #ddd inset;
+}
+
+.select-box label {
+    position: relative;
+}
+
+.acdn-content input {
+    margin-top: 20px;
+}
+
+#acdn-target3 input {
+    display: block;
+    overflow: hidden;
+    width: 70%;
+    max-width: 250px;
+    height: 50px;
+    margin: 20px auto 15px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.where-text {
+    padding-top: 5px;
+}
+
+.se-main-lucky-btn {
+    overflow: hidden;
+    width: 95%;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    border: solid 2px #D3381C;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.se-main-lucky-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+/* マウスオーバーカラー */
+
+.se-main-lucky-btn a:hover {
+    background: #D3381C;
+    color: #fff;
+}
+
+/* 今週の初めましてさん */
+
+.newcomer {
+    margin: 15px 0;
+}
+
+.newcomer-text {
+    border: solid 1px #D3381C;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    width: 130px;
+}
+
+@font-face {
+    font-family: 'slick';
+    src: url(/slick.ttf);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 25px;
+    line-height: 1;
+    opacity: .5;
+    color: #000;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*======== pc ========*/
+
+@media screen and (min-width: 768px) {
+    .select {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+    .select-box {
+        width: 30%;
+    }
+    .se-main-btn {
+        margin-bottom: 40px;
+    }
+    .se-title-text {
+        font-size: 1.6rem;
+        padding: 60px 0 40px 0;
+    }
+    .qa {
+        padding-top: 20px;
+    }
+    .se-main-lucky-btn {
+        margin-bottom: 40px;
+    }
+}

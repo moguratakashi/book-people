@@ -36,6 +36,7 @@ p {
 a {
     text-decoration: none;
     color: #610901;
+    cursor: pointer;
 }
 
 a:hover {
@@ -1003,4 +1004,197 @@ hr {
     .se-main-lucky-btn {
         margin-bottom: 40px;
     }
+}
+
+/*======================================== search-job ========================================*/
+
+/*======== sp ========*/
+
+.tab-area {
+    margin-top: 20px;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+.tab li {
+    background: #ccc;
+    padding: 15px 40px;
+    float: left;
+    margin-right: 3px;
+    border-radius: 6px 6px 0 0;
+    color: #777;
+}
+
+.tab li.tab-select {
+    background: #D3381C;
+    color: #fff;
+}
+
+.tab-content li {
+    background: #eee;
+    padding: 15px 15px 1px 15px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.hide {
+    display: none;
+}
+
+.tab-content-box {
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    border: solid 2px #D3381C;
+    border-radius: 6px;
+    /*    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);*/
+    background: #fff;
+}
+
+.tab-content-box a {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333333;
+    padding: 0;
+}
+
+.tab-person {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-other-btn {
+    overflow: hidden;
+    width: 70%;
+    max-width: 300px;
+    height: 50px;
+    margin: 40px auto 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    /*    clear: both;*/
+}
+
+.search-other-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* マウスオーバーカラー */
+
+.search-other-btn a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.search-other-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/*======== pc ========*/
+
+@media screen and (min-width: 768px) {
+    .tab-area {
+        margin-top: 30px;
+    }
+    .tab li {
+        padding: 15px 80px;
+        margin-right: 6px;
+    }
+
+}
+
+/*======================================== result-books ========================================*/
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-text {
+    width: 95%;
+}
+
+.profile-img {
+    min-width: 66px;
+    height: 66px;
+    background-image: url(../img/profile-img.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #D3381C;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+    cursor: pointer;
+}
+
+.profile-img:hover {
+    opacity: 0.5;
+}
+
+.circle-gray {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 9px;
+    /* width,heightの半分 */
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #bbb;
+    margin: 0 auto;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px
+}
+
+.book-age {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    /* width,heightの半分 */
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #D3381C;
+    margin: 0 auto;
+}
+
+.book-age p {
+    width: 50px;
+    padding-top: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.book-box {
+    margin: 0 auto;
+}
+
+.book-icon {
+    padding-top: 5px;
+    display: flex;
+}
+
+.book-icon li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.mybest-icon img,
+.comment-icon img {
+    padding-right: 4px;
 }

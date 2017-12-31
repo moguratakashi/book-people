@@ -24,7 +24,7 @@ body {
 h1 {
     color: #610901;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 10px 0 10px 0;
 }
@@ -123,11 +123,21 @@ header a {
     }
 }
 
+/*ログイン画面*/
+
+.login-title {
+    font-size: 1.2rem;
+    padding: 40px 0 40px 0;
+}
+
+
+
 /*======== breadcrumbs ========*/
 
 .breadcrumbs-inner {
     padding: 10px 0 20px 10px;
     font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .breadcrumbs a {
@@ -645,7 +655,7 @@ hr {
 
 .se-main-btn {
     overflow: hidden;
-    width: 95%;
+    width: 99%;
     margin: 0 auto 10px auto;
     border-radius: 8px;
     border: solid 2px #D3381C;
@@ -657,6 +667,7 @@ hr {
 .arrow-icon-bottom a:hover {
     background: #D3381C;
     color: #fff;
+    text-decoration: none;
 }
 
 /*赤い丸下向き */
@@ -919,7 +930,7 @@ hr {
 
 .se-main-lucky-btn {
     overflow: hidden;
-    width: 95%;
+    width: 99%;
     height: 50px;
     margin: 0 auto 10px auto;
     border-radius: 8px;
@@ -1116,6 +1127,16 @@ hr {
 
 /*======================================== result-books ========================================*/
 
+/*======== sp ========*/
+
+.mybest-box {
+    margin: 10px;
+    padding: 10px 15px 15px 15px;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
 .profile {
     display: flex;
     justify-content: space-between;
@@ -1143,40 +1164,41 @@ hr {
     opacity: 0.5;
 }
 
-.circle-gray {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    -webkit-border-radius: 9px;
-    /* width,heightの半分 */
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-    background-color: #bbb;
-    margin: 0 auto;
+.profile-btn {
+    position: fixed;
+    right: 37px;
+    top: 140px;
 }
 
 .book {
     display: flex;
     align-items: center;
-    padding-bottom: 40px
+    padding: 15px 0;
+    border-radius: 8px;
+    background: #eee;
 }
 
 .book-age {
-    width: 50px;
-    height: 50px;
-    -webkit-border-radius: 25px;
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 35px;
     /* width,heightの半分 */
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
     background-color: #D3381C;
     margin: 0 auto;
+    position: relative;
 }
 
 .book-age p {
-    width: 50px;
-    padding-top: 16px;
+    width: 70px;
+    padding-top: 24px;
     text-align: center;
     color: #fff;
+}
+
+.book-age span {
+    font-size: 1.6rem;
 }
 
 .book-box {
@@ -1197,4 +1219,837 @@ hr {
 .mybest-icon img,
 .comment-icon img {
     padding-right: 4px;
+}
+
+.arrow {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.re-content-box {
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    border: solid 2px #D3381C;
+    border-radius: 6px;
+    /*    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);*/
+    background: #fff;
+    min-height: 102px;
+}
+
+.re-content-box a {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333333;
+    padding: 0;
+}
+
+/*モーダル表示エリア*/
+
+.re-modal {
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.re-modal p {
+    color: #333;
+}
+
+.remodal-contents {
+    border-radius: 6px;
+    border: solid 1px #D3381C;
+    margin-bottom: 30px;
+}
+
+.bookimg {
+    padding: 20px 0;
+}
+
+.remodal-contents h2 {
+    background-color: #D3381C;
+    border-radius: 6px 6px 0 0;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 15px;
+}
+
+.book-question {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 15px;
+    text-align: left;
+    color: #610901;
+}
+
+.remodal h3 {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.book-question h3 img {
+    padding-right: 5px;
+}
+
+.book-question p {
+    line-height: 2;
+}
+
+.amazon-btn {
+    padding: 20px;
+}
+
+.amazon-btn a {
+    display: block;
+    text-align: center;
+}
+
+.amazon-btn:hover {
+    opacity: 0.5;
+}
+
+.addbook-btn {
+    overflow: hidden;
+    width: 244px;
+    max-width: 300px;
+    height: 50px;
+    margin: 0 auto 40px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    /*    clear: both;*/
+}
+
+.addbook-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.addbook-btn a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.addbook-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.comment textarea {
+    width: 97%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #999;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px #ddd inset;
+    border-radius: 6px;
+    line-height: 2;
+    font-size: 1rem;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.posted-comment p {
+    text-align: left;
+}
+
+.posted-comment-text {
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 10px;
+    background: #eee;
+    margin-bottom: 10px;
+}
+
+.posted-comment-text hr {
+    height: 1px;
+    border: none;
+    border-top: 2px #aaa dashed;
+    margin: 0 0 10px 0;
+}
+
+.posted-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iine-btn a {
+    display: block;
+    color: #999;
+    width: 200px;
+    max-width: 250px;
+    margin: 20px auto 10px auto;
+    padding: 10px 0;
+    border: solid 1px #999;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iine-btn a:hover {
+    color: #F5A623;
+    text-decoration: none;
+}
+
+.personimg {
+    padding: 20px 0 0 0;
+}
+
+.personal-info {
+    width: 199px;
+    margin: 0 auto;
+}
+
+.personal-info p {
+    text-align: right;
+}
+
+.personal-info ul {
+    padding-bottom: 10px;
+}
+
+.personal-info li {
+    color: #333;
+    text-align: left;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/*======================================== my page ========================================*/
+
+.mypage-info {
+    display: flex;
+    border: solid 1px #D3381C;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.mypage-info img {
+    padding-right: 5px;
+}
+
+.mypage-info li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.info-number {
+    color: #D3381C;
+}
+
+.search-book {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #610901;
+    padding-bottom: 5px;
+}
+
+#search-box {
+    background-color: white;
+    height: 30px;
+    border: solid 1px #999;
+}
+
+#search-box input {
+    vertical-align: top;
+    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+#search-box {
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    border: none;
+    width: 85%;
+    padding-left: 10px;
+}
+
+#search-submit {
+    width: 13%;
+    text-align: center;
+    border: none;
+    background-image: url("/img/search-gray.png");
+    background-position: center;
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+}
+
+.mypage-sqbtns {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.mypage-sqbtn {
+    border: solid 1px #D3381C;
+    border-radius: 6px;
+    width: 48%;
+    background: #fff;
+}
+
+.mypage-sqbtn dt {
+    text-align: center;
+    background: #D3381C;
+    border-radius: 6px 6px 0 0;
+    padding: 5px 0;
+    color: #fff;
+}
+
+.sqbtn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    line-height: 1.3;
+    font-size: 0.8rem;
+}
+
+.sqbtn-text img {
+    padding-right: 8px;
+}
+
+.my-main-btns {
+    margin: 10px 0;
+}
+
+.my-main-btn {
+    overflow: hidden;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    border: solid 1px #D3381C;
+}
+
+.my-main-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+/* マウスオーバーカラー */
+
+.my-main-btn a:hover {
+    background: #D3381C;
+    color: #fff;
+}
+
+/*======================================== 10 years ========================================*/
+
+.change-date {
+    padding-bottom: 15px;
+}
+
+.diary-area {
+    width: 300px;
+    margin: 0 10px;
+}
+
+.diary-box {
+    border-radius: 6px;
+    background: #fff;
+    margin: 10px 5px;
+    padding: 5px 15px;
+    border: solid 2px #ccc;
+}
+
+.diary-box a {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333333;
+    padding: 0;
+}
+
+.diary-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.diary-date p {
+    font-size: 0.9rem;
+}
+
+.diary-date a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: #610901;
+}
+
+.diary-date a img {
+    padding-right: 5px;
+}
+
+.diary-box hr {
+    height: 1px;
+    border: none;
+    border-top: 2px #ccc dashed;
+    margin: 0 0 10px 0;
+}
+
+/*======================================== memo ========================================*/
+
+.memo-h1-title {
+    margin-bottom: 30px;
+}
+
+.memo-h1-title p {
+    color: #D3381C;
+}
+
+.memo-book-icon {
+    padding: 0;
+    display: flex;
+}
+
+.memo-book-icon li {
+    display: flex;
+    align-items: center;
+    margin: 4px 20px 0 0;
+    text-decoration: none;
+}
+
+/*======================================== memo-search ========================================*/
+
+.search-no {
+    font-size: 0.8rem;
+    border-bottom: solid 1px #ccc;
+}
+
+.search-result {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: dashed 1px #ccc;
+}
+
+.search-result-book {
+    padding-right: 10px;
+}
+
+.search-text p {
+    padding-bottom: 5px;
+}
+
+.se-register-btn {
+    overflow: hidden;
+    width: 60%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.se-register-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* マウスオーバーカラー */
+
+.se-register-btn a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.se-register-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.wantbook-btn {
+    overflow: hidden;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border: solid 2px #D3381C;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.wantbook-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.wantbook-btn a:hover {
+    background: #D3381C;
+    color: #fff;
+}
+
+.wantbook-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.me-main-btn {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    border: solid 2px #D3381C;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.me-button {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #610901;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.me-button.active {
+    background: #D3381C;
+    color: #fff;
+}
+
+.edit-btn {
+    overflow: hidden;
+    width: 244px;
+    max-width: 300px;
+    height: 50px;
+    margin: 25px auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.edit-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #012651;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.edit-btn a:hover {
+    background: #fff;
+    color: #012651;
+}
+
+.edit-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.montlybest-btn {
+    overflow: hidden;
+    width: 244px;
+    max-width: 300px;
+    height: 50px;
+    margin: 25px auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.montlybest-btn a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.montlybest-btn a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.montlybest-btn a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/*======================================== want-read ========================================*/
+
+.se-register-btn-red {
+    overflow: hidden;
+    width: 189px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.se-register-btn-red a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #D3381C;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* マウスオーバーカラー */
+
+.se-register-btn-red a:hover {
+    background: #fff;
+    color: #D3381C;
+}
+
+.se-register-btn-red a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+
+.se-register-btn-blue {
+    overflow: hidden;
+    width: 189px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.se-register-btn-blue a {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #012651;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* マウスオーバーカラー */
+
+.se-register-btn-blue a:hover {
+    background: #fff;
+    color: #012651;
+}
+
+.se-register-btn-blue a:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.se-register-btn-amazon:hover {
+    opacity: 0.5;
+}
+
+.three-btn {
+    margin: 5px 0;
+}
+
+/*======================================== montly-read ========================================*/
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    background: #ddd;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.month a {
+    text-decoration: underline;
+    color: #610901;
+}
+
+.this-month {
+    font-size: 1.2rem;
+}
+
+.paging {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 10px 0;
+}
+
+.next,
+.back {
+    background: #D3381C;
+    padding: 8px 24px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+}
+
+.next a,
+.back a {
+    color: #fff;
+}
+
+.back {
+    margin-right: 40px
+}
+
+/*======================================== edit-profile ========================================*/
+
+.edit-title {
+    background: #ddd;
+    padding: 4px;
+    margin: 10px 0;
+    color: #610901;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.required {
+    background: #D3381C;
+    font-size: 0.6rem;
+    padding: 3px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.edit-img {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.change-img-box {
+    display: flex;
+    align-items: center;
+}
+
+.change-img {
+    margin-right: 5px;
+}
+
+.change-img-text {
+    color: #610901;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.change-img-text:hover {
+    text-decoration: none;
+}
+
+.hosoku {
+    font-size: 0.9rem;
+}
+
+.edit-img-ex {
+    padding-top: 20px;
+}
+
+.current-img {
+    padding-right: 10px;
+}
+
+.edit-answer {
+    padding-bottom: 10px;
+}
+
+.edit-answer textarea {
+    width: 95%;
+    height: 50px;
+}
+
+.save-edit-btn {
+    display: block;
+    overflow: hidden;
+    width: 70%;
+    max-width: 250px;
+    height: 50px;
+    margin: 20px auto 15px auto;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29);
+    background: #D3381C;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#edit-profile textarea,
+.name {
+    position: relative;
+    width: 94%;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #999;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px #ddd inset;
+    border-radius: 6px;
+
+}
+
+.edit-box {
+    padding-bottom: 20px;
+}
+
+.if-nojob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    color: #610901;
+    text-decoration: underline
+}
+
+.if-nojob img {
+    padding-right: 10px;
+}
+
+.not-everyQ {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 5px;
 }

@@ -16,6 +16,28 @@ $('#acdn-button3').click(function () {
     $('#acdn-target3').slideToggle();
 });
 
+$('#acdn-button4').click(function () {
+    $(this).toggleClass('active');
+    $('#acdn-target4').slideToggle();
+});
+
+$('#acdn-button5').click(function () {
+    $(this).toggleClass('active');
+    $('#acdn-target5').slideToggle();
+});
+
+$('#acdn-button6').click(function () {
+    $(this).toggleClass('active');
+    $('#acdn-target6').slideToggle();
+});
+
+$('#acdn-button7').click(function () {
+    $(this).toggleClass('active');
+    $('#acdn-target7').slideToggle();
+});
+
+
+
 // [#tojiru-button]にクリックイベントを設定する
 $('#tojiru-button1').click(function () {
     $('#acdn-button1').removeClass('active');
@@ -26,6 +48,12 @@ $('#tojiru-button2').click(function () {
     $('#acdn-button2').removeClass('active');
     $('#acdn-target2').slideToggle();
 });
+
+$('#tojiru-button3').click(function () {
+    $('#acdn-button5').removeClass('active');
+    $('#acdn-target5').slideToggle();
+});
+
 
 
 //質問とその回答から探すエリア
@@ -44,6 +72,14 @@ $('.newcomer').slick({
     centerMode: true,
     centerPadding: '20px',
     variableWidth: true
+});
+
+$('.diary').slick({
+    arrows: true,
+    slidesToShow: 1,
+    centerMode: true,
+    centerPadding: '150px',
+    variableWidth: true,
 });
 
 // 748px以上の場合はメニューを開く（リサイズ）
@@ -105,3 +141,18 @@ $('.tab li').click(function () {
     //クリックされたタブのみにクラスselectをつけます。
     $(this).addClass('tab-select')
 });
+
+//-------------------- result-books --------------------//
+
+//スクロールで付いてくる人のアイコン画像
+var proBtn = $('.profile-img');
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        proBtn.addClass('profile-btn');
+    } else {
+        proBtn.removeClass('profile-btn');
+    }
+});
+
+
+//-------------------- 10years --------------------//

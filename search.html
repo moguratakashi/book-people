@@ -32,8 +32,33 @@
                 <ul>
                     <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
                     <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
-                    <li><a href=""><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
                 </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
             </div>
             <!-- /.header-inner -->
         </div>

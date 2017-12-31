@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+    <script src="script/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <!-- ヘッダーの要素 -->
+                <div class="ic-book">
+                    <a href="index.html">
+                        <img class="sp" src="img/header-icon.png" alt="本と人アイコン画像">
+                        <img class="pc" src="img/header-icon-pc.png" alt="本と人アイコン画像">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
+                    <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
+            </div>
+            <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner"><span><a href="">ホーム</a></span> > <span><a href="">高尾苑子さんのマイページ</a></span> > 読書メモ</div>
+            </div>
+            <!-- /.breadcrumbs -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section>
+        <div class="container">
+            <div class="box-title">
+                <div class="memo-h1-title">
+                    <p>Record of Reading</p>
+                    <hr>
+                    <h1>読書メモ</h1>
+                    <hr>
+                </div>
+                <p class="search-book">本を検索して登録する</p>
+                <form id="search-box" action="#">
+                    <input id="search-input" type="text" placeholder="検索">
+                    <input id="search-submit" type="submit" value="">
+                </form>
+                <p class="search-no">検索結果 : 10件</p>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book1.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn">
+                            <a href="#register-book">登録する</a>
+                        </div>
+                    </div>
+                    <!--モーダル表示エリア　10年日記記述エリア-->
+                    <div class="remodal-bg"></div>
+                    <div class="remodal" data-remodal-id="register-book">
+                        <button data-remodal-action="close" class="remodal-close"></button>
+                        <div class="register-book-bg">
+                            <div class="register-book-area">
+                                <h3>本を登録する</h3>
+                                <div class="register-bookimg">
+                                    <img src="img/search-book1.png" alt="">
+                                    <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                                </div>
+                                <div class="wantbook-btn">
+                                    <a href="">読みたい本に登録する</a>
+                                </div>
+                                <div class="me-main-btn">
+                                    <p class="arrow-icon-bottom"><a id="acdn-button6" class="me-button">読書メモを書く</a></p>
+                                    <!-- 開閉する要素 -->
+                                    <div id="acdn-target6" class="acdn-content">
+                                        <form action="#" method="GET">
+                                            <p class="dashedline-title">読み終わった日付</p>
+                                            <hr>
+                                            <div class="me-select">
+                                                <div class="me-select-box">
+                                                    <select name="year" id="year">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2010">2010</option>
+                                                    </select>
+                                                    <p>年</p>
+                                                    <select name="month" id="month">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                    <p>月</p>
+                                                    <select name="month" id="month">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                    </select>
+                                                    <p>日</p>
+                                                </div>
+                                                <!-- ./me-select-box -->
+                                            </div>
+                                            <!-- ./me-select -->
+
+                                            <div class="me-select">
+                                                <p class="dashedline-title">評価</p>
+                                                <hr>
+                                                <div class="me-select-box">
+                                                    <ul>
+                                                        <li><img src="img/book-star-gray.png" alt=""></li>
+                                                        <li><img src="img/book-star-gray.png" alt=""></li>
+                                                        <li><img src="img/book-star-gray.png" alt=""></li>
+                                                        <li><img src="img/book-star-gray.png" alt=""></li>
+                                                        <li><img src="img/book-star-gray.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- ./me-select-box -->
+                                            </div>
+                                            <!-- ./me-select -->
+
+                                            <div class="me-select">
+                                                <p class="dashedline-title">読書メモ</p>
+                                                <hr>
+                                                <textarea name="" id=""></textarea>
+                                            </div>
+                                            <!-- ./me-select -->
+                                            <input type="submit" name="submit" value="登録する" />
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <!-- /.se-main-btn -->
+
+                                <div class="me-main-btn">
+                                    <p class="arrow-icon-bottom"><a id="acdn-button7" class="me-button">大切な一冊として登録する</a></p>
+                                    <!-- 開閉する要素 -->
+                                    <div id="acdn-target7" class="acdn-content">
+
+                                        <form action="#" method="GET">
+                                            <p class="dashedline-title">何才の頃に読んだ本ですか？</p>
+                                            <hr>
+                                            <div class="me-select">
+                                                <div class="me-select-boxage">
+                                                    <select name="age" id="age">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                        <option value="32">32</option>
+                                                        <option value="33">33</option>
+                                                        <option value="34">34</option>
+                                                        <option value="35">35</option>
+                                                        <option value="36">36</option>
+                                                        <option value="37">37</option>
+                                                        <option value="38">38</option>
+                                                        <option value="39">39</option>
+                                                        <option value="40">40</option>
+                                                        <option value="41">41</option>
+                                                        <option value="42">42</option>
+                                                        <option value="43">43</option>
+                                                        <option value="44">44</option>
+                                                        <option value="45">45</option>
+                                                        <option value="46">46</option>
+                                                        <option value="47">47</option>
+                                                        <option value="48">48</option>
+                                                        <option value="49">49</option>
+                                                        <option value="50">50</option>
+                                                        <option value="51">51</option>
+                                                        <option value="52">52</option>
+                                                        <option value="53">53</option>
+                                                        <option value="54">54</option>
+                                                        <option value="55">55</option>
+                                                        <option value="56">56</option>
+                                                        <option value="57">57</option>
+                                                        <option value="58">58</option>
+                                                        <option value="59">59</option>
+                                                        <option value="60">60</option>
+                                                        <option value="71">71</option>
+                                                        <option value="72">72</option>
+                                                        <option value="73">73</option>
+                                                        <option value="74">74</option>
+                                                        <option value="75">75</option>
+                                                        <option value="76">76</option>
+                                                        <option value="77">77</option>
+                                                        <option value="78">78</option>
+                                                        <option value="79">79</option>
+                                                        <option value="80">80</option>
+                                                        <option value="81">81</option>
+                                                        <option value="82">82</option>
+                                                        <option value="83">83</option>
+                                                        <option value="84">84</option>
+                                                        <option value="85">85</option>
+                                                        <option value="86">86</option>
+                                                        <option value="87">87</option>
+                                                        <option value="88">88</option>
+                                                        <option value="89">89</option>
+                                                        <option value="90">90</option>
+                                                        <option value="91">91</option>
+                                                        <option value="92">92</option>
+                                                        <option value="93">93</option>
+                                                        <option value="94">94</option>
+                                                        <option value="95">95</option>
+                                                        <option value="96">96</option>
+                                                        <option value="97">97</option>
+                                                        <option value="98">98</option>
+                                                        <option value="99">99</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                                    <p>才頃です。</p>
+                                                </div>
+                                                <!-- ./me-select-box -->
+                                            </div>
+                                            <!-- ./me-select -->
+
+                                            <div class="me-important">
+                                                <p class="dashedline-title">「大切な本」に選んだ理由を教えて下さい。</p>
+                                                <hr>
+                                                <textarea name="" id=""></textarea>
+                                            </div>
+                                            <!-- ./me-select -->
+
+                                            <div class="me-important">
+                                                <p class="dashedline-title">どんな人にオススメしますか？</p>
+                                                <hr>
+                                                <textarea name="" id=""></textarea>
+                                            </div>
+                                            <!-- ./me-select -->
+                                            <input type="submit" name="submit" value="登録する" />
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /.se-main-btn -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/モーダル表示エリア　10年日記記述エリア-->
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book2.png" alt=""></div>
+                    <div class="search-text">
+                        <p>WordPressユーザーのためのPHP入門 はじめから、ていねいに。<br>2014/3/25<br>水野史土</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book3.png" alt=""></div>
+                    <div class="search-text">
+                        <p>＊例題から学ぶ＊ －誰でも簡単PHP初級マスター編－PHP初心者からプロへの第1歩を踏み出そう！: ＊例題から学ぶ＊ －誰でも簡…</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book4.png" alt=""></div>
+                    <div class="search-text">
+                        <p>いきなりはじめるPHP~ワクワク・ドキドキの入門教室~<br>2011/12/9<br>谷藤賢一、 河原健人</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book5.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book1.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book2.png" alt=""></div>
+                    <div class="search-text">
+                        <p>WordPressユーザーのためのPHP入門 はじめから、ていねいに。<br>2014/3/25<br>水野史土</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book3.png" alt=""></div>
+                    <div class="search-text">
+                        <p>＊例題から学ぶ＊ －誰でも簡単PHP初級マスター編－PHP初心者からプロへの第1歩を踏み出そう！: ＊例題から学ぶ＊ －誰でも簡…</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book4.png" alt=""></div>
+                    <div class="search-text">
+                        <p>いきなりはじめるPHP~ワクワク・ドキドキの入門教室~<br>2011/12/9<br>谷藤賢一、 河原健人</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book5.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn">
+                            <a href="menu.html#modal">登録する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.se-box-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li><a href="">利用規約</a></li>
+                    <li><a href="">運営者</a></li>
+                    <li><a href="">個人情報保護方針</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+                <p><small>&#169;Takashi Kenmochi. All Rights Reserved.</small></p>
+            </div>
+            <!-- /.footer-inner -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

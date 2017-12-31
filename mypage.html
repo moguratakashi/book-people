@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+    <script src="script/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <!-- ヘッダーの要素 -->
+                <div class="ic-book">
+                    <a href="index.html">
+                        <img class="sp" src="img/header-icon.png" alt="本と人アイコン画像">
+                        <img class="pc" src="img/header-icon-pc.png" alt="本と人アイコン画像">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
+                    <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
+            </div>
+            <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner"><span><a href="">ホーム</a></span> > 高尾苑子さんのマイページ</div>
+            </div>
+            <!-- /.breadcrumbs -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section>
+        <div class="container">
+            <div class="box-title">
+                <div class="h1-title">
+                    <p>My page</p>
+                    <hr>
+                    <h1>高尾苑子さん</h1>
+                    <hr>
+                </div>
+
+                <!-- /.h1-title -->
+                <div class="mypage-info">
+                    <div><img src="img/mypage-idol.png" alt=""></div>
+                    <ul>
+                        <li>フォロー：<span class="info-number">18人</span></li>
+                        <li>フォロワー：<span class="info-number">32人</span></li>
+                        <li>10年日記：<span class="info-number">172日（1年目）</span></li>
+                        <li>読書メモ：<span class="info-number">25冊</span></li>
+                        <li>読みたい本：<span class="info-number">7冊</span></li>
+                        <li>大切な本：<span class="info-number">8冊</span></li>
+                        <li>今月の一冊：<span class="info-number">4冊</span></li>
+                    </ul>
+                </div>
+                <p class="search-book">本を検索して登録する</p>
+                <form id="search-box" action="#">
+                    <input id="search-input" type="text" placeholder="検索">
+                    <input id="search-submit" type="submit" value="">
+                </form>
+                <div class="mypage-sqbtns">
+                    <div class="mypage-sqbtn">
+                        <dl>
+                            <dt>10年日記</dt>
+                            <a href="10years.html">
+                                <div class="sqbtn-text">
+                                    <dd><img src="img/calender.png" alt=""></dd>
+                                    <dd>日々のできごと<br>思いを記録して</dd>
+                                </div>
+                            </a>
+                        </dl>
+                    </div>
+                    <div class="mypage-sqbtn">
+                        <dl>
+                            <dt>読書メモ</dt>
+                            <a href="memo.html">
+                                <div class="sqbtn-text">
+                                    <dd><img src="img/bookwithpencil.png" alt=""></dd>
+                                    <dd>書かないと驚く<br>ほど忘れちゃう</dd>
+                                </div>
+                            </a>
+                        </dl>
+                    </div>
+                </div>
+                <!--./mypage-sqbtns-->
+
+                <div class="mypage-sqbtns">
+                    <div class="mypage-sqbtn">
+                        <dl>
+                            <dt>読みたい本</dt>
+                            <a href="want-read.html">
+                                <div class="sqbtn-text">
+                                    <dd><img src="img/want-to-read.png" alt=""></dd>
+                                    <dd>気になる本は<br>たくさんあります</dd>
+                                </div>
+                            </a>
+                        </dl>
+                    </div>
+                    <div class="mypage-sqbtn">
+                        <dl>
+                            <dt>皆の今月の一冊</dt>
+                            <a href="montly-best.html">
+                                <div class="sqbtn-text">
+                                    <dd><img src="img/star-gray.png" alt=""></dd>
+                                    <dd>気になるあの人の<br>今月のイチオシ</dd>
+                                </div>
+                            </a>
+                        </dl>
+                    </div>
+                </div>
+                <!--./mypage-sqbtns-->
+                <div class="my-main-btns">
+                    <div class="my-main-btn arrow-icon">
+                        <a href="edit-profile.html">プロフィールの登録・編集</a>
+                    </div>
+                    <div class="my-main-btn arrow-icon">
+                        <a href="#">大切な本の登録・編集</a>
+                    </div>
+                    <div class="my-main-btn arrow-icon">
+                        <a href="#">今月の一冊の登録・編集</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.se-box-content -->
+            <div class="box-title">
+                <div class="h1-title">
+                    <p>Recommend</p>
+                    <hr>
+                    <h1>おすすめユーザー</h1>
+                    <hr>
+                </div>
+                <!-- /.h1-title -->
+                <div class="newcomer">
+                    <div class="newcomer-text">
+                        <p><a>名前：剣持貴志／年齢：32才／職業：Webディレクター／挽肉がたっぷり入ったミートソースとカレー。／高校卒業してだらだらとフリーターをしていた時に、中学の同級生の長尾さんに言われた</a></p>
+                    </div>
+                    <div class="newcomer-text">
+                        <p><a>名前：川崎直哉／年齢：28才／職業：映像プロデューサー／そぼろが入っている炊き込みご飯。／ほわっとした雰囲気を出してるメンヘラ／川ちゃん／まず靴下を脱ぐ／背が高い／水泳／気分は上々</a></p>
+                    </div>
+                    <div class="newcomer-text">
+                        <p><a>名前：剣持貴志／年齢：32才／職業：Webディレクター／挽肉がたっぷり入ったミートソースとカレー。／高校卒業してだらだらとフリーターをしていた時に、中学の同級生の長尾さんに言われた</a></p>
+                    </div>
+                    <div class="newcomer-text">
+                        <p><a>名前：川崎直哉／年齢：28才／職業：映像プロデューサー／そぼろが入っている炊き込みご飯。／ほわっとした雰囲気を出してるメンヘラ／川ちゃん／まず靴下を脱ぐ／背が高い／水泳／気分は上々</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-title -->
+
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li><a href="">利用規約</a></li>
+                    <li><a href="">運営者</a></li>
+                    <li><a href="">個人情報保護方針</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+                <p><small>&#169;Takashi Kenmochi. All Rights Reserved.</small></p>
+            </div>
+            <!-- /.footer-inner -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

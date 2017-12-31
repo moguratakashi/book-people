@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+    <script src="script/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <!-- ヘッダーの要素 -->
+                <div class="ic-book">
+                    <a href="index.html">
+                        <img class="sp" src="img/header-icon.png" alt="本と人アイコン画像">
+                        <img class="pc" src="img/header-icon-pc.png" alt="本と人アイコン画像">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
+                    <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
+            </div>
+            <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner"><span><a href="">ホーム</a></span> > <span><a href="">高尾苑子さんのマイページ</a></span> > 10年日記</div>
+            </div>
+            <!-- /.breadcrumbs -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section>
+        <div class="container">
+            <div class="box-title">
+                <!--モーダル表示エリア　10年日記記述エリア-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="diary-write">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <div class="write-area-bg">
+                        <div class="write-area">
+                            <h3>2017年11月19日（日）</h3>
+                            <form action="" method="post">
+                                <textarea name="" id="" placeholder="日々のできごと、思いを記録して。"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--/モーダル表示エリア　10年日記記述エリア-->
+
+                <div class="diary">
+                    <div class="diary-area">
+                        <div class="10years-date">
+                            <div class="h1-title">
+                                <p>Diary</p>
+                                <hr>
+                                <h1>11月18日</h1>
+                                <hr>
+                            </div>
+                            <p class="change-date">日付の変更は ＜＞をタッチ、又はスワイプして下さい。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2015年　水曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>家から帰る時にふと家系ラーメンを食べたくなる気持ちを抑えきれない。あの中毒性…恐るべし。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2016年　金曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>栗原さんがSignに入社。とても嬉しけど、栗原さんは超優秀なので、追い越されない様に自分も頑張らねば。最近は家系ラーメン食べてないよ。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2017年　土曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>児玉さんにNIPAANの企画の相談をした。「本屋は何もやる気がない　笑。」という有り難いアドバイス。誰でもオンライン上に本のセレクトショップを作れる、コンシェルジュに成れる、みたいなものを軸に企画を練り直す。個人でも卸の価格でいけるのかな？</p>
+                        </div>
+                        <div class="search-other-btn">
+                            <a href="#diary-write">日記を書く</a>
+                        </div>
+                    </div>
+
+                    <div class="diary-area">
+                        <div class="10years-date">
+                            <div class="h1-title">
+                                <p>Diary</p>
+                                <hr>
+                                <h1>11月19日</h1>
+                                <hr>
+                            </div>
+                            <p class="change-date">日付の変更は ＜＞をタッチ、又はスワイプして下さい。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2015年　木曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>久しぶり早く帰れたので、たまには贅沢をと思いTUTAYAで映画借りて、西友で399円のピザと109円のビールもどきを買って買える。ささやかな幸せ。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2016年　土曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>アイスタの岸上さんはなんであんなにいつもイライラしているんだろう。あの人の部下は大変だろうな…。麻田さんも凄かったけど、世の中には一定数ああいう人がいる。</p>
+                        </div>
+                        <div class="diary-box">
+                            <div class="diary-date">
+                                <p class="dashedline-name">2017年　土曜日</p>
+                                <p><a href="">編集する</a></p>
+                            </div>
+                            <hr>
+                            <p>児玉さんにNIPAANの企画の相談をした。「本屋は何もやる気がない　笑。」という有り難いアドバイス。誰でもオンライン上に本のセレクトショップを作れる、コンシェルジュに成れる、みたいなものを軸に企画を練り直す。個人でも卸の価格でいけるのかな？</p>
+                        </div>
+                        <div class="search-other-btn">
+                            <a href="#diary-write">日記を書く</a>
+                        </div>
+                    </div>
+
+                    <!-- /.qa -->
+                </div>
+
+
+                <!-- /.se-box-content -->
+
+                <!-- /.box-title -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li><a href="">利用規約</a></li>
+                    <li><a href="">運営者</a></li>
+                    <li><a href="">個人情報保護方針</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+                <p><small>&#169;Takashi Kenmochi. All Rights Reserved.</small></p>
+            </div>
+            <!-- /.footer-inner -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

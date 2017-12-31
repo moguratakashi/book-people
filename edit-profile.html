@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+    <script src="script/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <!-- ヘッダーの要素 -->
+                <div class="ic-book">
+                    <a href="index.html">
+                        <img class="sp" src="img/header-icon.png" alt="本と人アイコン画像">
+                        <img class="pc" src="img/header-icon-pc.png" alt="本と人アイコン画像">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
+                    <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
+            </div>
+            <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner"><span><a href="">ホーム</a></span> > <span><a href="">高尾苑子さんのマイページ</a></span> > プロフィールの登録・編集</div>
+            </div>
+            <!-- /.breadcrumbs -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section>
+        <div class="container">
+            <div class="box-title">
+                <div class="h1-title">
+                    <p>Edit Profile</p>
+                    <hr>
+                    <h1>プロフィールの登録・編集</h1>
+                    <hr>
+                </div>
+                <div class="edit-box">
+                    <div class="edit-title">
+                        <p>プロフィール画像</p>
+                    </div>
+                    <div class="edit-img">
+                        <div class="current-img"><img src="img/edit-profile-img.png" alt=""></div>
+                        <div class="edit-img-ex">
+                            <div class="change-img-box">
+                                <p class="change-img"><img src="img/camera.png" alt=""></p>
+                                <p class="change-img-text"><a href="">画像登録・変更する</a></p>
+                            </div>
+                            <p class="hosoku">推奨サイズ：縦横180ピクセル以上の正方形画像</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <form id="edit-profile" action="#">
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>名前<span class="required">必須</span></p>
+                        </div>
+                        <input type="text" name="name" placeholder="名前を入力して下さい" class="name">
+                    </div>
+
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>性別<span class="required">必須</span></p>
+                        </div>
+                        <input type="radio" name="gender" value="male">男性
+                        <input type="radio" name="gender" value="female">女性
+                    </div>
+
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>生年月日<span class="required">必須</span></p>
+                        </div>
+                        <div class="me-select">
+                            <div class="me-select-box">
+                                <select name="year" id="year">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2010">2010</option>
+                                                    </select>
+                                <p>年</p>
+                                <select name="month" id="month">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                <p>月</p>
+                                <select name="day" id="day">
+                                                        <option value="null">----&nbsp;&#x25BC;</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                    </select>
+                                <p>日</p>
+                            </div>
+                            <!-- ./me-select-box -->
+                        </div>
+                        <!-- ./me-select -->
+                    </div>
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>出身地<span class="required">必須</span></p>
+                        </div>
+                        <div class="select-box">
+                            <select name="prefecture" id="prefecture">
+                                        <option value="prefecture">選択なし&nbsp;&#x25BC;</option>
+                                        <option value="p01">北海道</option>
+                                        <option value="p02">青森県</option>
+                                        <option value="p03">岩手県</option>
+                                        <option value="p04">宮城県</option>
+                                        <option value="p05">秋田県</option>
+                                        <option value="p06">山形県</option>
+                                        <option value="p07">福島県</option>
+                                        <option value="p08">茨城県</option>
+                                        <option value="p09">栃木県</option>
+                                        <option value="p10">群馬県</option>
+                                        <option value="p11">埼玉県</option>
+                                        <option value="p12">千葉県</option>
+                                        <option value="p13">東京都</option>
+                                        <option value="p14">神奈川県</option>
+                                        <option value="p15">新潟県</option>
+                                        <option value="p16">富山県</option>
+                                        <option value="p17">石川県</option>
+                                        <option value="p18">福井県</option>
+                                        <option value="p19">山梨県</option>
+                                        <option value="p20">長野県</option>
+                                        <option value="p21">岐阜県</option>
+                                        <option value="p22">静岡県</option>
+                                        <option value="p23">愛知県</option>
+                                        <option value="p24">三重県</option>
+                                        <option value="p25">滋賀県</option>
+                                        <option value="p26">京都府</option>
+                                        <option value="p27">大阪府</option>
+                                        <option value="p28">兵庫県</option>
+                                        <option value="p29">奈良県</option>
+                                        <option value="p30">和歌山県</option>
+                                        <option value="p31">鳥取県</option>
+                                        <option value="p32">島根県</option>
+                                        <option value="p33">岡山県</option>
+                                        <option value="p34">広島県</option>
+                                        <option value="p35">山口県</option>
+                                        <option value="p36">徳島県</option>
+                                        <option value="p37">香川県</option>
+                                        <option value="p38">愛媛県</option>
+                                        <option value="p39">高知県</option>
+                                        <option value="p40">福岡県</option>
+                                        <option value="p41">佐賀県</option>
+                                        <option value="p42">長崎県</option>
+                                        <option value="p43">熊本県</option>
+                                        <option value="p44">大分県</option>
+                                        <option value="p45">宮崎県</option>
+                                        <option value="p46">鹿児島県</option>
+                                        <option value="p47">沖縄県</option>
+                                    </select>
+                        </div>
+                        <!-- ./select-box-prefecture -->
+                    </div>
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>職業<span class="required">必須</span></p>
+                        </div>
+                        <div class="select-box">
+                            <select name="job" id="job">
+                                        <option value="job">選択なし&nbsp;&#x25BC;</option>
+                                        <optgroup label="あ行">
+                                        <option value="j01">職業名が入ります</option>
+                                        <option value="j02">職業名が入ります</option>
+                                        <option value="j03">職業名が入ります</option>
+                                        <option value="j04">職業名が入ります</option>
+                                        <option value="j05">職業名が入ります</option>
+                                        <option value="j06">職業名が入ります</option>
+                                        <option value="j07">職業名が入ります</option>
+                                        <option value="j08">職業名が入ります</option>
+                                        <option value="j09">職業名が入ります</option>
+                                        </optgroup>
+                                        <optgroup label="い行">
+                                        <option value="j01">職業名が入ります</option>
+                                        <option value="j02">職業名が入ります</option>
+                                        <option value="j03">職業名が入ります</option>
+                                        <option value="j04">職業名が入ります</option>
+                                        <option value="j05">職業名が入ります</option>
+                                        <option value="j06">職業名が入ります</option>
+                                        <option value="j07">職業名が入ります</option>
+                                        <option value="j08">職業名が入ります</option>
+                                        <option value="j09">職業名が入ります</option>
+                                        </optgroup>
+                        </select>
+                        </div>
+                        <div class="if-nojob">
+                            <p><img src="img/mail.png" alt=""></p>
+                            <p>あなたの職業が無い場合は<br>こちらからご連絡下さい。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="edit-box">
+                        <div class="edit-title">
+                            <p>質問と回答</p>
+                        </div>
+                        <div class="edit-answer">
+                            <p class="dashedline-title">おおよその年間読書量を教えて下さい。<span class="required">必須</span></p>
+                            <hr>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="edit-answer">
+                            <p class="dashedline-title">いつ頃から本を読むのが好きになりましたか？</p>
+                            <hr>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="edit-answer">
+                            <p class="dashedline-title">苦手な給食のメニューは何でしたか？</p>
+                            <hr>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="edit-answer">
+                            <p class="dashedline-title">最近買った「お気に入り」を教えて下さい。</p>
+                            <hr>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="edit-answer">
+                            <p class="dashedline-title">今の職業をやっていて「楽しい」と感じる瞬間を教えて下さい。</p>
+                            <hr>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="if-nojob">
+                            <p><img src="img/mail.png" alt=""></p>
+                            <p>あなたが聞いてみたい質問が<br>ありましたらご連絡下さい。</p>
+                        </div>
+                        <p class="not-everyQ">&#8251;全ての質問が掲載されるわけではありません</p>
+                    </div>
+                    <input class="save-edit-btn" type="submit" name="submit" value="編集を保存する" />
+                </form>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li><a href="">利用規約</a></li>
+                    <li><a href="">運営者</a></li>
+                    <li><a href="">個人情報保護方針</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+                <p><small>&#169;Takashi Kenmochi. All Rights Reserved.</small></p>
+            </div>
+            <!-- /.footer-inner -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

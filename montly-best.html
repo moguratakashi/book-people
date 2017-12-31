@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本と人</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/remodal.min.js"></script>
+    <script src="script/slick.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <!-- ヘッダーの要素 -->
+                <div class="ic-book">
+                    <a href="index.html">
+                        <img class="sp" src="img/header-icon.png" alt="本と人アイコン画像">
+                        <img class="pc" src="img/header-icon-pc.png" alt="本と人アイコン画像">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
+                    <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
+            </div>
+            <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-inner"><span><a href="">ホーム</a></span> > <span><a href="">高尾苑子さんのマイページ</a></span> > 皆の今月の一冊</div>
+            </div>
+            <!-- /.breadcrumbs -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section>
+        <div class="container">
+            <div class="box-title">
+                <div class="memo-h1-title">
+                    <p>Montly best</p>
+                    <hr>
+                    <h1>皆の今月の一冊</h1>
+                    <hr>
+                </div>
+                <div class="month">
+                    <p><a href="">&lt;9月</a></p>
+                    <p class="this-month">2017年10月</p>
+                    <p><a href="">11月&gt;</a></p>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book1.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn-red three-btn">
+                            <a href="">記事を読む</a>
+                        </div>
+                        <div class="se-register-btn-blue three-btn">
+                            <a href="">紹介者の情報を見る</a>
+                        </div>
+                        <div class="se-register-btn-amazon three-btn">
+                            <a href=""><img src="img/amazon-btn-s.png" alt=""></a>
+                        </div>
+                    </div>
+                    <!--モーダル表示エリア　10年日記記述エリア-->
+                    <div class="remodal-bg"></div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book3.png" alt=""></div>
+                    <div class="search-text">
+                        <p>＊例題から学ぶ＊ －誰でも簡単PHP初級マスター編－PHP初心者からプロへの第1歩を踏み出そう！: ＊例題から学ぶ＊ －誰でも簡…</p>
+                        <div class="se-register-btn-red three-btn">
+                            <a href="">記事を読む</a>
+                        </div>
+                        <div class="se-register-btn-blue three-btn">
+                            <a href="">紹介者の情報を見る</a>
+                        </div>
+                        <div class="se-register-btn-amazon three-btn">
+                            <a href=""><img src="img/amazon-btn-s.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="search-result-book"><img src="img/search-book5.png" alt=""></div>
+                    <div class="search-text">
+                        <p>確かな力が身につくPHP「超」入門 (Informatics & IDEA)<br>2016/9/27<br>松浦 健一郎、 司 ゆき</p>
+                        <div class="se-register-btn-red three-btn">
+                            <a href="">記事を読む</a>
+                        </div>
+                        <div class="se-register-btn-blue three-btn">
+                            <a href="">紹介者の情報を見る</a>
+                        </div>
+                        <div class="se-register-btn-amazon three-btn">
+                            <a href=""><img src="img/amazon-btn-s.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paging">
+                    <p class="back"><a href="">&lt; 前へ</a></p>
+                    <p class="next"><a href="">次へ &gt;</a></p>
+
+                </div>
+
+            </div>
+            <!-- /.se-box-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li><a href="">利用規約</a></li>
+                    <li><a href="">運営者</a></li>
+                    <li><a href="">個人情報保護方針</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+                <p><small>&#169;Takashi Kenmochi. All Rights Reserved.</small></p>
+            </div>
+            <!-- /.footer-inner -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

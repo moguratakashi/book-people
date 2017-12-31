@@ -32,8 +32,33 @@
                 <ul>
                     <li><a href="about.html"><img class="icon-hatena" src="img/header-hatena.png" alt="はてなアイコン画像">本と人について</a></li>
                     <li><a href="search.html"><img class="icon-search" src="img/header-search.png" alt="虫眼鏡アイコン画像">人を探す</a></li>
-                    <li><a href=""><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
+                    <li><a href="#modal-login"><img class="icon-my" src="img/header-watashi.png" alt="人アイコン画像">Myページ</a></li>
                 </ul>
+                <!--モーダル表示エリア　ログイン-->
+                <div class="remodal-bg"></div>
+                <div class="remodal" data-remodal-id="modal-login">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2 class="login-title">マイページにログインする</h2>
+                    <form action="" method="post">
+                        <div class="input-mail">
+                            <p class="mail-title"><label for="mail">メールアドレス</label></p>
+                            <input type="email" name="email" id="mail" placeholder="sample@mail.com" />
+                        </div>
+                        <!-- /.input mail -->
+                        <div class="input-pass">
+                            <p class="pass-title"><label for="password">パスワード</label></p>
+                            <input type="password" name="password" id="password" placeholder="password" />
+                            <p class="login-check"><input type="checkbox">次回から自動ログイン</p>
+                        </div>
+                        <!-- /.input-pass -->
+                        <p><input type="submit" name="submit" value="ログインする" id="submit"></p>
+                    </form>
+                    <p class="form-text"><a href="" class="forget">パスワードを忘れた場合はこちら</a></p>
+                    <p class="facebook-btn"><a href="mypage.html"><img src="img/btn-facebook-login.png" alt=""></a></p>
+                    <p class="twitter-btn"><a href="mypage.html"><img src="img/btn-twitter-login.png" alt=""></a></p>
+                    <p class="form-text"><a href="" class="nregistered">ユーザー登録がお済みでない方はこちら</a></p>
+                </div>
+
             </div>
             <!-- /.header-inner -->
         </div>
@@ -52,7 +77,7 @@
     </nav>
     <section>
         <div class="container">
-            <div class="box-title">
+            <div class="mybest-box">
                 <div class="h1-title">
                     <p>My best</p>
                     <hr>
@@ -61,67 +86,256 @@
                 </div>
                 <!-- /.h1-title -->
 
-                <div class="tab-content-box">
-                    <a href="">
-                        <div class="tab-person">
-                            <p class="dashedline-name">高尾苑子／20才／アイドル</p>
-                            <p><span class="star">&#9733;</span>32</p>
+                <div class="re-content-box">
+                    <div class="tab-person">
+                        <p class="dashedline-name">高尾苑子／20才／アイドル</p>
+                        <p><span class="star">&#9733;</span>32</p>
+                    </div>
+                    <hr>
+                    <div class="profile">
+                        <p class="profile-text">2013年からChubbinessというアイドルグループに所属して活動しています。</p>
+                        <p class="profile-img" id="profile-img"><a href="#modal-pro"><img src="img/toumei.png" alt=""></a></p>
+                        <!--モーダル表示エリア　人の詳細-->
+                        <div class="remodal-bg"></div>
+                        <div class="remodal" data-remodal-id="modal-pro">
+                            <button data-remodal-action="close" class="remodal-close"></button>
+                            <div class="re-modal">
+                                <div class="remodal-contents">
+                                    <h2>高尾苑子</h2>
+                                    <div class="personal-info">
+                                        <img src="img/idol.png" alt="" class="personimg">
+                                        <p><span class="star">&#9733;</span>32</p>
+                                        <ul>
+                                            <li>名前：高尾苑子</li>
+                                            <li>年齢：20才</li>
+                                            <li>出身地：福岡県</li>
+                                            <li>職業：アイドル</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="book-question">
+                                        <h3><img src="img/hatena_icon.png" alt="">おおよその年間読書量を教えて下さい。</h3>
+                                        <hr>
+                                        <p>1週間で1冊位読んでると思うので、年間だと50冊位でしょうか。</p>
+                                    </div>
+                                    <div class="book-question">
+                                        <h3><img src="img/hatena_icon.png" alt="">いつ頃から本を読むのが好きになりましたか？</h3>
+                                        <hr>
+                                        <p>小さい頃から好きでした。姉が本が好きだったので、その影響なのかもしれません。</p>
+                                    </div>
+                                    <div class="book-question">
+                                        <h3><img src="img/hatena_icon.png" alt="">苦手な給食のメニューは何でしたか？</h3>
+                                        <hr>
+                                        <p>ソフトメンが苦手でした。あの柔らかさとスープの量に対して麺の量が多すぎるのが辛かったです。</p>
+                                    </div>
+                                    <div class="book-question">
+                                        <h3><img src="img/hatena_icon.png" alt="">最近買った「お気に入り」を教えて下さい。</h3>
+                                        <hr>
+                                        <p>雨トークで「魁！男塾」の特集をしていて、すぐAmazonでポチったのですが、とても面白くてハマっています。赤石剛次がカッコイイです。</p>
+                                    </div>
+                                    <div class="book-question">
+                                        <h3><img src="img/hatena_icon.png" alt="">今の職業をやっていて「楽しい」と感じる瞬間を教えて下さい。</h3>
+                                        <hr>
+                                        <p>2013年からChubbinessという「ポッチャリ」した女の子を集めたアイドルグループで活動をしています。私は正直あまり歌が上手じゃないのですが、その分ダンスを頑張っていて、そこをファンの方達に褒めて頂けるととても嬉しいです。</p>
+                                    </div>
+                                </div>
+                                <div class="addbook-btn">
+                                    <a href="">お気に入りに追加する</a>
+                                </div>
+
+
+                                <!--/re-modal-->
+                            </div>
+                            <!--/モーダル表示エリア-->
                         </div>
-                        <hr>
-                        <div class="profile">
-                            <p class="profile-text">2013年からChubbinessというアイドルグループに所属して活動しています。</p>
-                            <p class="profile-img"><a href=""></a></p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="re-main">
-                    <div class="time-line">
-                        <div class="circle-gray"></div>
-                        <div class="line-gray"></div>
-                        <div class="circle-gray"></div>
-                    </div>
                     <div class="book">
                         <div class="book-age">
-                            <p>6才</p>
+                            <p><span>6</span>才</p>
                         </div>
                         <div class="book-box">
                             <a href="" class="book-img"><img src="img/book1.png" alt=""></a>
-                            <ul class="book-icon">
-                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>0</span></li>
-                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="book-age">
-                            <p>14才</p>
-                        </div>
-                        <div class="book-box">
-                            <a href="" class="book-img"><img src="img/book2.png" alt=""></a>
                             <ul class="book-icon">
                                 <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
                                 <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
                             </ul>
                         </div>
                     </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
                     <div class="book">
                         <div class="book-age">
-                            <p>15才</p>
+                            <p><span>14</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="#modal-book" class="book-img"><img src="img/book2.png" alt=""></a>
+                            <!--モーダル表示エリア　本の詳細-->
+                            <div class="remodal-bg"></div>
+                            <div class="remodal" data-remodal-id="modal-book">
+                                <button data-remodal-action="close" class="remodal-close"></button>
+                                <div class="re-modal book-modal">
+                                    <div class="remodal-contents">
+                                        <h2>一瞬の風になれ</h2>
+                                        <img src="img/book2.png" alt="" class="bookimg">
+                                        <div class="book-question">
+                                            <h3><img src="img/hatena_icon.png" alt="">何歳の頃に読んだ本ですか？</h3>
+                                            <hr>
+                                            <p>16歳頃です。</p>
+                                        </div>
+                                        <div class="book-question">
+                                            <h3><img src="img/hatena_icon.png" alt="">「大切な本」に選んだ理由を教えて下さい。</h3>
+                                            <hr>
+                                            <p>冒頭からどんどん惹きつけられる、甘酸っぱく、ずきずきするような青春ストーリー。佐藤多佳子さんの本は中学生のころから好きで、今でもよく読み返しています。魅力的な登場人物に、繊細なストーリー。なんとなく胸にすっと水が入ってくるような感じの印象の本が多いです。本屋大賞にもなっていたので読んだことがある方も多いかもしれません。スポーツ系の青春物で、この本は読むだけでもう一度青春を送った気になれるくらい。この本を読み返すと、当時の悩み（今思うと何であんなことで悩んでたのかな？）や、考えていた事が蘇ってきて、ちょっと恥ずかしい、でも私とって大切な時間を思い出せる本です。</p>
+                                        </div>
+                                        <div class="book-question">
+                                            <h3><img src="img/hatena_icon.png" alt="">どんな人にオススメしますか？</h3>
+                                            <hr>
+                                            <p>青春系の本が好きな方はぜひ読んでみてください！この年代のころだけに感じていたようないろんな感情。とりだしてもう一回眺めてみるのは恥ずかしいけど、ぜひ一度この本を通して覗いてみてください。きっと忘れてしまっている素敵な思い出にもう一度出会えると思います。</p>
+                                        </div>
+                                        <p class="amazon-btn"><a href=""><img src="img/amazon-btn.png" alt=""></a></p>
+                                        <!--/remodal-contents-->
+                                        <div class="addbook-btn">
+                                            <a href="">読みたい本に追加する</a>
+                                        </div>
+                                    </div>
+                                    <form action="#" method="GET">
+                                        <div class="comment">
+                                            <textarea name="" id="comment" maxlength="240" placeholder="コメントをする"></textarea>
+                                        </div>
+                                    </form>
+                                    <div class="posted-comment">
+                                        <p>コメント<span id="comment-NO">（2）</span></p>
+                                        <hr>
+                                        <div class="posted-comment-text">
+                                            <div class="posted-name">
+                                                <h4><a href="">栗原隆／26才／映像ディレクター</a></h4>
+                                                <p><span class="star">&#9733;</span>4</p>
+                                            </div>
+                                            <hr>
+                                            <p>高尾さんの文章を読んで、こちらの本読んでみました。最近仕事でなかなか上手くいかない事が多く悩んでいたのですが、なんかこの本を読んでスッキリしました。ありがとうございました。</p>
+                                            <div class="iine-btn">
+                                                <a href="#">いいね
+		                                            <img src="img/iine-btn-gray.png" alt="" onmouseover="this.src='img/iine-btn-yellow.png'" onmouseout="this.src='img/iine-btn-gray.png'">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="posted-comment-text">
+                                            <div class="posted-name">
+                                                <h4><a href="">田中よし子／40才／主婦</a></h4>
+                                                <p><span class="star">&#9733;</span>2</p>
+                                            </div>
+                                            <hr>
+                                            <p>中学生になる娘が反抗期で、何考えているのか分からないなぁ…と思っていた時にこの本を読みました。「私もこんな事考えていたなぁ。」と色々思い出して、少しだけ今の娘の気持ちが分かった気がします。</p>
+                                            <div class="iine-btn">
+                                                <a href="#">いいね
+		                                            <img src="img/iine-btn-gray.png" alt="" onmouseover="this.src='img/iine-btn-yellow.png'" onmouseout="this.src='img/iine-btn-gray.png'">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="amazon-btn"><a href=""><img src="img/amazon-btn.png" alt=""></a></p>
+                                        <!--/remodal-contents-->
+                                        <div class="addbook-btn">
+                                            <a href="">読みたい本に追加する</a>
+                                        </div>
+                                    </div>
+                                    <!--/re-modal-->
+                                </div>
+                                <!--/モーダル表示エリア-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>15</span>才</p>
                         </div>
                         <div class="book-box">
                             <a href="" class="book-img"><img src="img/book3.png" alt=""></a>
                             <ul class="book-icon">
-                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>3</span></li>
-                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>1</span></li>
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
                             </ul>
                         </div>
                     </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>16</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="" class="book-img"><img src="img/book4.png" alt=""></a>
+                            <ul class="book-icon">
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>17</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="" class="book-img"><img src="img/book5.png" alt=""></a>
+                            <ul class="book-icon">
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>17</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="" class="book-img"><img src="img/book6.png" alt=""></a>
+                            <ul class="book-icon">
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>19</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="" class="book-img"><img src="img/book7.png" alt=""></a>
+                            <ul class="book-icon">
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="arrow"><img src="img/bottom-arrow.png" alt=""></div>
+
+                    <div class="book">
+                        <div class="book-age">
+                            <p><span>20</span>才</p>
+                        </div>
+                        <div class="book-box">
+                            <a href="" class="book-img"><img src="img/book8.png" alt=""></a>
+                            <ul class="book-icon">
+                                <li class="mybest-icon"><img src="img/mybest-icon.png" alt=""><span>4</span></li>
+                                <li class="comment-icon"><img src="img/comment-icon.png" alt=""><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="search-other-btn">
             <a href="search.html">他の職業で探す</a>
-        </div>
         </div>
         <!-- /.container -->
     </section>
